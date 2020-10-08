@@ -1,12 +1,12 @@
 <template>
   <div>
     <div>
-      <h1>{{ point }}</h1>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -14,6 +14,9 @@
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="https://global-abilities.jp/wp-content/uploads/2017/10/1.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://global-abilities.jp/wp-content/uploads/2017/10/1.png" alt="Third slide">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="https://global-abilities.jp/wp-content/uploads/2017/10/1.png" alt="Third slide">
@@ -40,9 +43,7 @@
       }
     },
     computed:{
-      point(){
-        return 1;
-      }
+      
     }
   }
 </script>

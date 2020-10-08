@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <!-- <Slider></Slider> -->
-
+    <Slider></Slider>
     <!-- contact menu -->
     <div id="context-menu">
       <div class="item">
@@ -15,11 +14,11 @@
         <i class="fa fa-paste"></i> Paste
       </div>
       <div class="item">
-        <i class="fa fa-trash-o"></i> Delete
+        <i class="fa fa-trash"></i> Delete
       </div>
       <hr>
       <div class="item">
-        <i class="fa fa-refresh"></i> Reload
+        <i class="fa fa-sync"></i> Reload
       </div>
       <div class="item">
         <i class="fa fa-times"></i> Exit
@@ -30,12 +29,12 @@
 
 
 <script>
-// import Slider from './components/Slider'
+import Slider from './components/Slider'
 import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    // Slider,
+    Slider,
     HelloWorld
   }
 }
@@ -52,13 +51,6 @@ window.addEventListener("click",function(){
 </script>
 
 <style>
-#app{
-  height: 100vh;
-}
-body {
-  margin:0px;
-  font-family:"Open Sans",sans-serif;
-}
 #context-menu {
   position:fixed;
   z-index:10000;
@@ -73,6 +65,7 @@ body {
   transition:transform 300ms ease-in-out;
 }
 #context-menu .item {
+  cursor: pointer;
   padding:8px 10px;
   font-size:15px;
   color:#eee;
