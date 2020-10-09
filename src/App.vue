@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <Slider></Slider>
+
     <!-- contact menu -->
     <div id="context-menu">
       <div class="item">
@@ -30,12 +30,10 @@
 
 <script>
 import Slider from './components/Slider'
-import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    Slider,
-    HelloWorld
+    Slider
   }
 }
 window.addEventListener("contextmenu",function(event){
