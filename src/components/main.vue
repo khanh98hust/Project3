@@ -48,70 +48,70 @@
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-pdf"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-pdf"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-pdf"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="fas fa-file-audio"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-audio"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-audio"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-archive"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-archive"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-archive"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
       <div class="ml-5 mb-4 file">
         <div class="icon">
           <i class="far fa-file-word"></i>
         </div>
-        <p class="ml-3"><i class="far fa-file-word"></i>  Name file</p>
+        <p class="ml-3"><i class="far fa-file-word"></i>  Filename</p>
       </div>
 
     </div>
