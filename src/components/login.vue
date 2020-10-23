@@ -9,7 +9,7 @@
           <input type="text" id="email" class="form-control" placeholder="Email@domain.com">
           <br>
           <label for="pas"><h5>Password</h5></label>
-          <input type="text" id="pas" class="form-control">
+          <input type="password" id="pas" class="form-control">
           <br>
           <button type="submit" class="btn btn-primary" @click="login">Login</button>
           <h3>To Register New Account → <button type="button" class="btn btn-outline-primary">Register</button></h3>
