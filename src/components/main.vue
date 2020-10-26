@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- contact menu -->
-    <div id="context-menu">
+    <div id="contextMenu">
       <div class="item">
         <i class="fa fa-clone"></i> Add new item
       </div>
@@ -105,20 +105,6 @@
 </template>
 
 <script>
-window.addEventListener("contextmenu",function(event){
-  // console.log(event);
-  event.preventDefault();
-  var contextElement = document.getElementById("context-menu");
-  contextElement.style.top = event.clientY  + "px";
-  contextElement.style.left = event.clientX  + "px";
-  contextElement.classList.add("active");
-});
-window.addEventListener("click",function(){
-  document.getElementById("context-menu").classList.remove("active");
-});
-</script>
-
-<script>
 import api from '../sevices/api';
 export default {
   data(){
@@ -131,7 +117,7 @@ export default {
       return api.get('/files')
       .then(res => {
         this.folders = res.data.folders;
-        console.log(this.folders);
+        // console.log(this.folders);
       })
       .catch(err => console.log('err: ', err))
     }
@@ -140,11 +126,22 @@ export default {
     this.getdata()
   }
 }
+  window.addEventListener("contextmenu",function(event){
+    console.log(event);
+    event.preventDefault();
+    var contextElement = document.getElementById("contextMenu");
+    contextElement.style.top = event.clientY  + "px";
+    contextElement.style.left = event.clientX  + "px";
+    contextElement.classList.add("active");
+  });
+  window.addEventListener("click",function(){
+    document.getElementById("contextMenu").classList.remove("active");
+  });
 </script>
 
 <style scoped>
 
-#context-menu {
+#contextMenu {
   position:fixed;
   z-index:10000;
   width:150px;
@@ -153,24 +150,24 @@ export default {
   transform:scale(0);
   transform-origin:top left;
 }
-#context-menu.active {
+#contextMenu.active {
   transform:scale(1);
   transition:transform 300ms ease-in-out;
 }
-#context-menu .item {
+#contextMenu .item {
   cursor: pointer;
   padding:8px 10px;
   font-size:15px;
   color:#eee;
 }
-#context-menu .item:hover {
+#contextMenu .item:hover {
   background:#555;
 }
-#context-menu .item i {
+#contextMenu .item i {
   display:inline-block;
   margin-right:5px;
 }
-#context-menu hr {
+#contextMenu hr {
   margin:2px 0px;
   border-color:#555;
 }

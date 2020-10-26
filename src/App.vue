@@ -27,6 +27,6 @@ export default {
 
 <style>
 #app{
-  font-family: 'Pacifico', cursive;
+  font-family: 'Work Sans', sans-serif;
 }
 </style>
