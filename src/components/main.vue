@@ -2,8 +2,11 @@
   <div class="main">
     <!-- contact menu -->
     <div id="contextMenu">
-      <div class="item">
-        <i class="fa fa-clone"></i> Add new item
+      <div class="item d-flex">
+        <div class="upload-btn-wrapper">
+          <button class="btn">New file</button>
+          <input type="file" name="myfile" />
+        </div>
       </div>
       <div class="item">
         <i class="fa fa-paste"></i> Paste
@@ -127,7 +130,7 @@ export default {
   }
 }
   window.addEventListener("contextmenu",function(event){
-    console.log(event);
+    // console.log(event);
     event.preventDefault();
     var contextElement = document.getElementById("contextMenu");
     contextElement.style.top = event.clientY  + "px";
@@ -205,5 +208,28 @@ export default {
     border-radius: 8px;
     border: 2px solid white; /* should match background, can't be transparent */
     background-color: rgba(0, 0, 0, .5);
+}
+.mb-4, .my-4 {
+    margin-bottom: 4.5rem !important;
+}
+
+/* buttom file */
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 </style>

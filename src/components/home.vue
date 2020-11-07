@@ -18,24 +18,18 @@
         <Main></Main>
       </div>
       <div class="col-2 left">
-        <div class="dropdown mt-5">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Create new file
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+        <div class="upload-btn-wrapper mb-4 mt-5">
+          <button class="btn">Upload a file</button>
+          <input type="file" name="myfile" />
         </div>
-        <br>
-        <a type="file" href="">Upload files </a>
-        <br>
-        <a href="">upload folder</a>
-        <br>
-        <a href="">New folder</a>
-        <br>
-        <a href="">New shared folder</a>
+        <div class="upload-btn-wrapper mb-4">
+          <button class="btn">Upload folder</button>
+          <input type="file" name="myfile" />
+        </div>
+        <div class="upload-btn-wrapper">
+          <button class="btn">New shared folder</button>
+          <input type="file" name="myfile" />
+        </div>
       </div>
 
     </div>
@@ -63,4 +57,29 @@
   overflow-y: hidden;
 }
 
+/* buttom file */
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  width: 220px;
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 </style>
