@@ -25,6 +25,11 @@
     <br>
     <h5>Folder</h5>
     <div class="d-flex flex-wrap mt-5">
+      <router-link to="/img">
+        <div class="ml-5 mb-5 p-2 folder d-flex">
+          <i class="fas fa-folder-open" style="font-size : 20px"></i> <p class="ml-3">img</p>
+        </div>
+      </router-link>
       <div v-for="item in folders" :key="item.id" class="ml-5 mb-5 p-2 folder d-flex">
         <i class="fas fa-folder-open" style="font-size : 20px"></i> <p class="ml-3">{{item}}</p>
       </div>
@@ -221,12 +226,11 @@ export default {
 }
 
 .btn {
-  padding: 8px 20px;
   font-weight: bold;
+  height: 100%;
 }
 
 .upload-btn-wrapper input[type=file] {
-  font-size: 10px;
   position: absolute;
   left: 0;
   top: 0;
