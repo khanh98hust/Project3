@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1 class="text-center animate__animated animate__flipInY" style="color : red; padding : 5px 0px;margin-bottom: 0rem !important;">► My drive ◄</h1>
+    <h1 class="text-center animate__animated animate__flipInY" style="color : red; padding : 5px 0px;margin-bottom: 0rem !important;">My drive</h1>
     <hr>
     <div class="row">
       <div class="col-2 left">
@@ -17,33 +17,43 @@
       <div class="col-8">
         <div class="main">
           <!-- contact menu -->
-          <div id="contextMenu">
-            <div class="item">
-              <div class="upload-btn-wrapper">
-                <button class="btn">New file</button>
-                <input type="file" name="myfile" />
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-paste"></i> Paste
-            </div>
-            <div class="item">
-              <i class="fa fa-trash"></i> Delete
-            </div>
-            <hr>
-            <div class="item">
-              <i class="fa fa-sync"></i> Reload
-            </div>
-            <div class="item">
-              <i class="fa fa-times"></i> Exit
-            </div>
-          </div>
+          <!-- contextMenu folder -->
+          <vue-context ref="menu">
+              <li>
+                  <a href="#"><i class="fas fa-folder-open" style="font-size: 20px"></i> Open</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-trash" style="font-size: 20px"></i> Delete</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Rename</a>
+              </li>
+          </vue-context>
+
+          <!-- contextMenu file -->
+          <vue-context ref="menu2">
+              <li>
+                  <a href="#"><i class="fas fa-share" style="font-size: 20px"></i> Share</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-truck-moving" style="font-size: 20px"></i> Move</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-trash" style="font-size: 20px"></i> Delete</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Rename</a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-download" style="font-size: 20px"></i> Download</a>
+              </li>
+          </vue-context>
           <br>
           <h5>Folder > img</h5>
           <hr>
           <br>
           <h5>Tệp</h5>
-          <div class="d-flex flex-wrap mt-5">
+          <div class="d-flex flex-wrap mt-5" @contextmenu.prevent="$refs.menu.open">
               <div class="ml-5 mb-5 p-2 folder d-flex">
                 <i class="fas fa-folder-open" style="font-size : 20px"></i> <p class="ml-3">img 1</p>
               </div>
@@ -54,7 +64,7 @@
                 <i class="fas fa-folder-open" style="font-size : 20px"></i> <p class="ml-3">img 3</p>
               </div>
           </div>
-          <div class="d-flex flex-wrap mt-5">
+          <div class="d-flex flex-wrap mt-5" @contextmenu.prevent="$refs.menu2.open">
             <div class="ml-5 mb-4 file">
               <div class="icon">
                 <i class="far fa-file-word"></i>
@@ -94,17 +104,17 @@
         </div>
       </div>
       <div class="col-2 left">
-        <div class="upload-btn-wrapper mb-4 mt-5">
-          <button class="btn">Upload a file</button>
-          <input type="file" name="myfile" />
+        <div class="mt-5">
+          <input type="file" ref="file" style="display: none">
+          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>Upload a file</h4></a></button>
         </div>
-        <div class="upload-btn-wrapper mb-4">
-          <button class="btn">Upload folder</button>
-          <input type="file" name="myfile" />
+        <div class="mt-5">
+          <input type="file" ref="file" style="display: none">
+          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>Upload folder</h4></a></button>
         </div>
-        <div class="upload-btn-wrapper">
-          <button class="btn">New shared folder</button>
-          <input type="file" name="myfile" />
+        <div class="mt-5">
+          <input type="file" ref="file" style="display: none">
+          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>New shared folder</h4></a></button>
         </div>
       </div>
 
@@ -113,8 +123,10 @@
 </template>
 
 <script>
+import VueContext from 'vue-context';
   export default {
     components : {
+      VueContext
     }
   }
 </script>
@@ -131,61 +143,6 @@
   overflow-y: hidden;
 }
 
-/* buttom file */
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.btn {
-  width: 220px;
-  border: 2px solid gray;
-  color: gray;
-  background-color: white;
-  padding: 8px 20px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.upload-btn-wrapper input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-#contextMenu {
-  position:fixed;
-  z-index:10000;
-  width:150px;
-  background:#1b1a1a;
-  border-radius:5px;
-  transform:scale(0);
-  transform-origin:top left;
-}
-#contextMenu.active {
-  transform:scale(1);
-  transition:transform 300ms ease-in-out;
-}
-#contextMenu .item {
-  cursor: pointer;
-  padding:8px 10px;
-  font-size:15px;
-  color:#eee;
-}
-#contextMenu .item:hover {
-  background:#555;
-}
-#contextMenu .item i {
-  display:inline-block;
-  margin-right:5px;
-}
-#contextMenu hr {
-  margin:2px 0px;
-  border-color:#555;
-}
 .folder ,.file{
   border: 1px solid rgb(156, 156, 156);
   border-radius: 10px;
@@ -226,23 +183,8 @@
     border: 2px solid white; /* should match background, can't be transparent */
     background-color: rgba(0, 0, 0, .5);
 }
-
-
-/* buttom file */
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.btn {
-  font-weight: bold;
-}
-
-.upload-btn-wrapper input[type=file] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
+.fileOpen{
+  border : none;
+  background-color: rgba(255, 255, 255, 0)
 }
 </style>
