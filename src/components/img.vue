@@ -153,8 +153,8 @@ import VueContext from 'vue-context';
   background-color: rgb(173, 173, 173);
 }
 .icon{
-  padding: 30px 70px;
-  font-size: 80px;
+  padding: 60px 70px;
+  font-size: 50px;
 }
 .icon1{
   
