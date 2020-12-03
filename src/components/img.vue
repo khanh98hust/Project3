@@ -106,15 +106,15 @@
       <div class="col-2 left">
         <div class="mt-5">
           <input type="file" ref="file" style="display: none">
-          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>Upload a file</h4></a></button>
+          <button class="fileOpen" @click.prevent="$refs.file.click()"><a href=""><h4>Upload a file</h4></a></button>
         </div>
         <div class="mt-5">
           <input type="file" ref="file" style="display: none">
-          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>Upload folder</h4></a></button>
+          <button class="fileOpen" @click.prevent="$refs.file.click()"><a href=""><h4>Upload folder</h4></a></button>
         </div>
         <div class="mt-5">
           <input type="file" ref="file" style="display: none">
-          <button class="fileOpen" @click="$refs.file.click()"><a href=""><h4>New shared folder</h4></a></button>
+          <button class="fileOpen" @click.prevent="$refs.file.click()"><a href=""><h4>New shared folder</h4></a></button>
         </div>
       </div>
 
