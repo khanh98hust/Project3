@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main" @contextmenu.prevent="$refs.menu3.open">
     <br>
     <h5>Folder</h5>
     <div class="d-flex flex-wrap mt-5">
@@ -19,6 +19,16 @@
         <p class="ml-3">{{ item }}</p>
       </div>
     </div>
+    <!-- contextMenu main -->
+    <vue-context ref="menu3">
+        <li>
+            <a href="#"><i class="fas fa-folder-open" style="font-size: 20px"></i> <input type="file" ref="file" style="display: none">
+          <button class="fileOpen" @click.prevent="$refs.file.click()"><p>New</p></button></a>
+        </li>
+        <li>
+            <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Reload</a>
+        </li>
+    </vue-context>
 
     <!-- contextMenu folder -->
     <vue-context ref="menu">

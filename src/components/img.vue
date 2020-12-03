@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" @contextmenu.prevent="$refs.menu3.open">
     <h1 class="text-center animate__animated animate__flipInY" style="color : red; padding : 5px 0px;margin-bottom: 0rem !important;">My drive</h1>
     <hr>
     <div class="row">
@@ -17,6 +17,17 @@
       <div class="col-8">
         <div class="main">
           <!-- contact menu -->
+          <!-- contextMenu main -->
+          <vue-context ref="menu3">
+              <li>
+                  <a href="#"><i class="fas fa-folder-open" style="font-size: 20px"></i> <input type="file" ref="file" style="display: none">
+                <button class="fileOpen" @click.prevent="$refs.file.click()"><p>New</p></button></a>
+              </li>
+              <li>
+                  <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Reload</a>
+              </li>
+          </vue-context>
+          
           <!-- contextMenu folder -->
           <vue-context ref="menu">
               <li>
@@ -29,6 +40,7 @@
                   <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Rename</a>
               </li>
           </vue-context>
+
 
           <!-- contextMenu file -->
           <vue-context ref="menu2">
