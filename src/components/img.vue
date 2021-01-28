@@ -27,7 +27,6 @@
                   <a href="#"><i class="fas fa-registered" style="font-size: 20px"></i> Reload</a>
               </li>
           </vue-context>
-          
           <!-- contextMenu folder -->
           <vue-context ref="menu">
               <li>
